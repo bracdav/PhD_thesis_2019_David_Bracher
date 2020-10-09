@@ -25,9 +25,11 @@
 
 		#conda activate NAME (Linux, MAC: conda source activate NAME)
 
-		#conda install spyder, jupyterlab, notebook, ipython (COMMENT: Spyder is a standard Python developement IDE, jupyterlab and notebook are interactive browser-based IDEs, ad ipython is a command prompt based Python developement environment)
+		#conda install spyder jupyterlab notebook ipython (COMMENT: Spyder is a standard Python developement IDE, jupyterlab and notebook are interactive browser-based IDEs, ad ipython is a command prompt based Python developement environment)
 		
-		#conda install glob, matplotlib, numpy, pandas, scipy (COMMENT: Installs all the neccessary dependencies to use thesis_db2019)
+		#conda install matplotlib numpy pandas scipy (COMMENT: Installs all the neccessary dependencies to use thesis_db2019)
+
+		#pip install Stoner
 
 	#To start Spyder call in the prompt: "spyder"
 
