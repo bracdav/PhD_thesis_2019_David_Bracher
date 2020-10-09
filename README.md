@@ -25,7 +25,7 @@ from Stoner.Fit import langevin as lv
 #Classes:
 	
 	#CoO:
-		#Inherits all functionality from Class DichroicSpectrum. Specific 		functionality for analysis of CoO nanoparticles can be added here.
+		#Inherits all functionality from Class DichroicSpectrum. Specific functionality for analysis of CoO nanoparticles can be added here.
 
 	#DichroicSpectrum:
 		#calc_dichroism
