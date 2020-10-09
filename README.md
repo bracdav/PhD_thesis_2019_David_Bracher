@@ -88,3 +88,12 @@ from Stoner.Fit import langevin as lv
 		#seperate_polarization
 		#step_norm
 		#xas_match
+
+#To do:
+	#add Matlab scripts
+	#add ImagJ scripts (correcting PEEM images and extracting spectra and XMLD/XMCD contrast)
+	#translate Matlab scipts to working Python scripts
+
+#Comment:
+	#The ImageJ macros are not added since the license is with the SIM Beamline. In order to obtain those macros please ask Dr. Armin Kleibert at SIM Beamline (armin.kleiber@psi.ch).
+	#Potentially the ImageJ macros will be added at an later point in time, if it will be allowed. Even in this case the license would stay with SIM Beamline.
