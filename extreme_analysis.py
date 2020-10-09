@@ -28,7 +28,7 @@ for folder in folders:
     data_extreme.step_norm(interval = [0, 30, 470, 500])
     
     
-    data_extreme.construct_intervall(ranges = [[0, 50], [51, 120], [121, 185], 
+    data_extreme.construct_interval(ranges = [[0, 50], [51, 120], [121, 185], 
                                                [186, 250], [251, 499]],
                                      sample = 15)
     data_extreme.xas_match(int_given = True, intervall = data_extreme.intervall)

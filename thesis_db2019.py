@@ -777,7 +777,7 @@ class XASExtreme:
         self.final['fieldx'] = np.abs(self.plus.groupby('#Ecrbk')['FieldX'].agg('first'))
         return self.final
         
-    def construct_intervall(self,ranges, full_xas = True, sample = 5):
+    def construct_interval(self,ranges, full_xas = True, sample = 5):
         """
         generate intervals for method xas_match()
         Parameters
