@@ -23,6 +23,7 @@ import seaborn as sns
 from Stoner.Fit import langevin as lv
 
 #Classes:
+	
 	#CoO:
 		#Inherits all functionality from Class DichroicSpectrum. Specific 		functionality for analysis of CoO nanoparticles can be added here.
 
