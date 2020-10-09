@@ -11,18 +11,49 @@
 
 #At the moment the codes to analyse the x-ray diffraction and reflection high energy electron diffraction data are not contained in the code base. However, those codes will also be translated from their initial Matlab versions soon. Although the Matlab codes are included for now, which will be obsolete when  the Python codes are finished.
 
-#The library is called thesis_db2019 contains:
-#The library should be imported calling 'from thesis_db2019 import *' in order to be able to call the calsses and functions directly. Further, importing the library this way will directly import the folowing packages:
-	#glob from glob
-	#matplotlib.pyplot as plt
-	#numpy as np
-	#pandas as pd
-	#curve_fit from scipy.optimize
-import scipy.constants as nat
-import seaborn as sns
-from Stoner.Fit import langevin as lv
 
-#Classes:
+
+##Install notes:
+
+	#Download and install miniconda
+
+	#Start miniconda prompt
+
+	#Run following commands:
+
+		#conda create --name NAME python=V (NAME: the name of the environment created, V: version of python to install; COMMENT: The version of python does not need to be explicitely set, if the version is not set the currently standard version of the miniconda distribution is installed)
+
+		#conda activate NAME (Linux, MAC: conda source activate NAME)
+
+		#conda install spyder, jupyterlab, notebook, ipython (COMMENT: Spyder is a standard Python developement IDE, jupyterlab and notebook are interactive browser-based IDEs, ad ipython is a command prompt based Python developement environment)
+		
+		#conda install glob, matplotlib, numpy, pandas, scipy (COMMENT: Installs all the neccessary dependencies to use thesis_db2019)
+
+	#To start Spyder call in the prompt: "spyder"
+
+	#To start Jupyter Lab or Notebook call in the prompt: "jupyter lab" resp. "jupyter notebook"
+
+
+#The library is called thesis_db2019 contains:
+#The library should be imported calling 'from thesis_db2019 import *' (library has to be located within the working directory of the scripts to run) in order to be able to call the calsses and functions directly. Further, importing the library this way will directly import the folowing packages:
+	
+	#glob from glob
+	
+	#matplotlib.pyplot as plt
+
+	#numpy as np
+
+	#pandas as pd
+
+	#curve_fit from scipy.optimize
+
+	#import scipy.constants as nat
+
+	#import seaborn as sns
+
+	#from Stoner.Fit import langevin as lv
+
+##Classes:
 	
 	#CoO:
 		#Inherits all functionality from Class DichroicSpectrum. Specific functionality for analysis of CoO nanoparticles can be added here.
@@ -88,6 +119,21 @@ from Stoner.Fit import langevin as lv
 		#seperate_polarization
 		#step_norm
 		#xas_match
+
+
+##Functions:
+	
+	#Find_S
+
+	#ScanPhi90
+
+	#ScanPhi0
+
+	#ScanTheta
+
+
+#For details on the classes and functions in thesis_db2019 please call the help() function on then within Python.
+
 
 #To do:
 	#add Matlab scripts
