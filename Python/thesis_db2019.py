@@ -1213,3 +1213,64 @@ class MomentsPerNP:
         self.ms = ms
         self.moments_per_np = self.ms * self.n_atoms
         return self.moments_per_np
+    
+    
+class RheedData:
+    
+    def __init__(self, file):
+        self.file = file
+        
+    def load_data(self, delimiter):
+        self.data = pd.read_csv(self.file, delimiter = delimiter, index_col = 'X')
+        return self.data
+    
+    def set_zero(self, shift):
+        self.shift = shift
+        self.data.index = self.data.index - self.shift
+    
+    def set_temp(self):
+        string = self.file.split('.')[0].split('_')[-1]
+        self.data['temperature (K)'] = string
+        
+    def px_to_2theta(self):
+        twotheta = np.arctan((self.data.index * 0.2645) / 341.6)
+        self.data['2theta'] = twotheta
+        
+    def set_energy(self, energy):
+        self.energy = energy 
+        
+        
+    def get_wavelength(self):
+        c = nat.physical_constants['speed of light in vacuum'][0]
+        m = nat.physical_constants['electron mass'][0]
+        e = nat.physical_constants['elementary charge'][0]
+        h = nat.physical_constants['Planck constant'][0]
+        
+        self.wavelength = h / (2 * m * e * self.energy * (1 + e * self.energy / (2 * m * c**2)))**0.5
+        
+    def set_q(self):
+        self.q = 4 * np.pi * np.sin(self.data['2theta']/2) / (self.wavelength / 1e-10)
+        self.data['q'] = self.q
+        
+        
+        
+class RheedSim:
+    
+    def __init__(self, sim_files, names):
+        self.sim_files = {}
+        
+        for name, file in zip(names, sim_files):
+            self.sim_files[name] = pd.read_csv(file, delimiter = '\s+')
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
