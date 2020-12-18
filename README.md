@@ -21,7 +21,7 @@
 
 	#Run following commands:
 
-		#conda create --name NAME python=V (NAME: the name of the environment created, V: version of python to install; COMMENT: The version of python does not need to be explicitely set, if the version is not set the currently standard version of the miniconda distribution is installed)
+		#conda create --name NAME python=V (NAME: the name of the environment created, V: version of python to install (needs to be <3.6, for the Stoner package to work); COMMENT: The version of python does not need to be explicitely set, if the version is not set the currently standard version of the miniconda distribution is installed)
 
 		#conda activate NAME (Linux, MAC: conda source activate NAME)
 
