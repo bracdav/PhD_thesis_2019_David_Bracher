@@ -134,6 +134,48 @@ def Find_S(ANGLES,I01,I02,I03,I2,THETA,PHI):
     return out
 
 
+def scan(X, I0, I2, THETA, PHI):
+
+#def scan(X, I2, THETA, PHI, *args):
+#I0 -> *args
+    """
+
+    Parameters
+    ----------
+    X : ndarray
+        ndarray.shape = (N,2) with first column phi_s, and second column
+        theta_s. Definition according to PhD Thesis D. Bracher,
+        'Antiferromagnetic properties of 3d transition metal oxide
+        nanoparticles', 2019, p24 (access provided by the Library of the
+        University of Basel, https://edoc.unibas.ch/view/type/phd.html)
+    I03 : TYPE
+        DESCRIPTION.
+    I2 : TYPE
+        DESCRIPTION.
+    THETA : TYPE
+        DESCRIPTION.
+    PHI : TYPE
+        DESCRIPTION.
+
+    Returns
+    -------
+    TYPE
+        DESCRIPTION.
+
+    """
+
+    X = (X) * np.pi / 180
+    PHIS = X[:, 0]
+    THETAS = X[:, 1]
+    PHI = (PHI + 90) * np.pi / 180
+    THETA = (THETA) * np.pi / 180
+    res = I0 - I2 * ((np.cos(PHIS) * np.cos(THETAS) * np.sin(0 * np.pi / 180) +
+                      np.sin(PHIS) * np.sin(THETAS)) * np.sin(THETA) * np.cos(PHI) +
+                     (-np.sin(PHIS) * np.cos(THETAS) * np.sin(0 * np.pi / 180) +
+                      np.cos(PHIS) * np.sin(THETAS)) * np.sin(THETA) * np.sin(PHI) +
+                     np.cos(THETAS) * np.cos(0 * np.pi / 180) * np.cos(THETA))**2
+    return res
+
 
 """Analysis classes as used in thesis"""
 class XASpectrum:
